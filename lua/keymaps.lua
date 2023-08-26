@@ -19,3 +19,10 @@ vim.keymap.set('x', '<', '<<')
 vim.keymap.set('x', '>', '>>')
 
 vim.keymap.set('n', '<Leader>r', '[[<Cmd>luafile ~/.config/nvim/init.lua<CR>]]')
+
+vim.keymap.set('n', '<ESC><ESC>', [[<Cmd>nohlsearch<CR>]])
+
+vim.keymap.set('n', '<Left>', [[<Cmd>vertical resize -5<CR>]])
+vim.keymap.set('n', '<Right>', [[<Cmd>vertical resize +5<CR>]])
+vim.keymap.set('n', '<Up>', [[<Cmd>resize -5<CR>]])
+vim.keymap.set('n', '<Down>', [[<Cmd>resize -5<CR>]])

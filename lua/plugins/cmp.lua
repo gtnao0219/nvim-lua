@@ -1,6 +1,4 @@
-local cmp_status, cmp = pcall(require, "cmp")
-if (not cmp_status) then return end
-
+local cmp = require('cmp')
 cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
@@ -9,6 +7,11 @@ cmp.setup {
     { name = 'path' },
     { name = 'nvim_lua' },
     { name = 'luasnip' },
+    { name = 'copilot' },
+    {
+      name = "dictionary",
+      keyword_length = 2,
+    },
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
@@ -61,3 +64,4 @@ cmp.setup.cmdline(':', {
     }
   )
 })
+require("cmp_dictionary").setup {}

@@ -1,0 +1,8 @@
+local lspsaga = require('lspsaga')
+lspsaga.setup({})
+vim.keymap.set('n', '<Leader>K', require('lspsaga.hover').render_hover_doc)
+vim.keymap.set('n', '<Leader>ca', require('lspsaga.codeaction').code_action)
+vim.keymap.set('n', '<Leader>rn', require('lspsaga.rename').rename)
+vim.keymap.set('n', '<Leader>dn', require('lspsaga.diagnostic').navigate('next'))
+vim.keymap.set('n', '<Leader>dp', require('lspsaga.diagnostic').navigate('prev'))
+vim.keymap.set('n', '<Leader>df', '<Cmd>Lspsaga lsp_finder<CR>')
